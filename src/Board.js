@@ -39,7 +39,7 @@ export default function Board() {
     setBoard({ values: board });
     setHide({ one: false, two: false });
     setString("Player 1's Turn");
-    setTimeout(() => {
+    runComputer = setTimeout(() => {
       if (!player.human) {
         computer();
       }
@@ -91,7 +91,7 @@ export default function Board() {
       player = player1;
     }
     setString("Player " + player.number + "'s Turn");
-    setTimeout(() => {
+    runComputer = setTimeout(() => {
       if (!player.human) {
         computer();
       }
@@ -294,7 +294,7 @@ export default function Board() {
   function computer() {
     let algo = miniMax(
       board,
-      4,
+      6,
       player,
       Number.NEGATIVE_INFINITY,
       Number.POSITIVE_INFINITY
