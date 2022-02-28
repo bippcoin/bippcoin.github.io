@@ -294,7 +294,7 @@ export default function Board() {
   function computer() {
     let algo = miniMax(
       board,
-      6,
+      5,
       player,
       Number.NEGATIVE_INFINITY,
       Number.POSITIVE_INFINITY
